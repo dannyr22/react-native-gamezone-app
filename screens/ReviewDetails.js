@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stylesheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text } from 'react-native'
 
 const ReviewDetails = () => {
     return (
@@ -10,7 +10,7 @@ const ReviewDetails = () => {
 }
  
 
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
     container: {
         padding: 24,
     }
