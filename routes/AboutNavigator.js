@@ -1,19 +1,18 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/Home";
-import ReviewDetails from "../screens/ReviewDetails";
+import About from "../screens/About";
 
 const { Navigator, Screen } = createStackNavigator();
 
 
 
-const HomeNavigator = ({ navigation }) => (
+const AboutNavigator = ({ navigation }) => (
   <Navigator headerMode="float">
  {/* other options: "float", "screen" */}
     <Screen 
     name="Home"
-    component={Home}
+    component={About}
     options={{ 
     title: 'GameZone',
     headerStyle: {
@@ -25,18 +24,11 @@ const HomeNavigator = ({ navigation }) => (
         fontWeight: 'bold',
       },
       }} />
-    <Screen 
-    name="Details" 
-    component={ReviewDetails} 
-    options={{ 
-    title: 'Review Details',
-     }} 
-    />
   </Navigator>
 );
 
-export const AppNavigator = () => (
+export const AboutNavigator = () => (
   <NavigationContainer>
-    <HomeNavigator />
+    <AboutNavigator />
   </NavigationContainer>
 );

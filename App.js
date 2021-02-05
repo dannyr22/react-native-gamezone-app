@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 import Home from './screens/Home';
-import { AppNavigator } from "./routes/AppNavigator";
+import Navigator from "./routes/drawer";
 
 const getFonts = () => 
   Font.loadAsync({
@@ -19,7 +19,7 @@ export default function App() {
 
   if(fontsLoaded) {
     return (
-      <AppNavigator />
+      <Navigator />
       // <View />
     );
   } else {
